@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlienMovement : MonoBehaviour
 {
     public float speed;
     public GameObject alien;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,11 +17,5 @@ public class AlienMovement : MonoBehaviour
     {
         transform.position -= transform.up * speed * Time.deltaTime;
 
-        Vector2 alienPosition = Camera.main.WorldToScreenPoint(transform.position);
-
-        if (alienPosition.y <= Screen.height - Screen.height)
-        {
-            Destroy(alien);
-        }
     }
 }

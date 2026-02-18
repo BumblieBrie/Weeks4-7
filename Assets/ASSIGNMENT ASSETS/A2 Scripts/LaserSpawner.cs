@@ -13,9 +13,10 @@ public class LaserSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            Instantiate(laserPrefab, transform.position, Quaternion.identity);
-        }
+        
+    }
+    public void shootLaser()
+    {
+        Instantiate(laserPrefab, transform.position, Quaternion.identity);
     }
 }

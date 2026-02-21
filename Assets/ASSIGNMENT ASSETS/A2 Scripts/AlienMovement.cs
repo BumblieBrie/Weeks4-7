@@ -15,6 +15,7 @@ public class AlienMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //move the aliens at a consistent random speed
         transform.position -= transform.up * speed * Time.deltaTime;
 
     }

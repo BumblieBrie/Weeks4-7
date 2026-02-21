@@ -25,6 +25,8 @@ public class AlienSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //set up a timer for spawning the aliens
+        //set up a spawn range for spawninig the aliens at random around an empty gameobject
         spawnTime += Time.deltaTime;
         spawnRange = new Vector2(transform.position.x + Random.Range(-10f, 10f), transform.position.y);
         if (spawnTime >= spawnSpeed)
@@ -33,7 +35,9 @@ public class AlienSpawner : MonoBehaviour
             spawnedAlien = Instantiate(alienPrefab, spawnRange, quaternion.identity);
             aliens.Add(spawnedAlien);
         }
-
+        //loop through the list of aliens
+        //check if they're past the rocketships position
+        //if they are, destroy the alien and subtract from players health
         for(int i = 0; i < aliens.Count; i++)
         {
             if (aliens[i].transform.position.y <= -4.5)

@@ -23,6 +23,7 @@ public class LaserSpriteChanger : MonoBehaviour
 
     public void changeLaser()
     {
+        // change the laser colour the same way we set the sprite colour, but attach it to the slider value
         if (slider.value == 0)
         {
             sr.sprite = lasers[0];

@@ -17,6 +17,7 @@ public class LaserSpawner : MonoBehaviour
     }
     public void shootLaser()
     {
+        //spawn the laser
         Instantiate(laserPrefab, transform.position, Quaternion.identity);
     }
 }

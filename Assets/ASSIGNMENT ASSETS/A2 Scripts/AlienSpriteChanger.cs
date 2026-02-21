@@ -22,6 +22,10 @@ public class AlienSpriteChanger : MonoBehaviour
     {
         
     }
+    //set up some options for the aliens colour, don't forget to put the sprites in in the inspector
+    //get some bools ready to compare with the colour of the laser
+    //set each new alien to a random sprite out of the list
+    
     void PickARandomSprite()
     {
         randomAlien = Random.Range(0, aliens.Length);
